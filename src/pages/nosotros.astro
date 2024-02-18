@@ -1,16 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import video from "../videos/video-inicio.mp4";
 ---
 
 <Layout title="">
-<div class="content-nosotros">
-<p>sobre nosotros</p>
+    <div class="header content">
+        <video src={video} autoplay loop></video>
+    </div>
+    <div class="overlay"></div>
+    <div class="header-content">
+        <h1>titulo</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
+            aut labore iure obcaecati illum qui iusto facilis reprehenderit vero.
+            Cumque pariatur fugiat facilis ea molestiae perferendis aliquam iusto
+            accusantium.
+        </p>
+    </div>
 </Layout>
-</div>
+
 
 <style>
-    .content-nosotros{
+    .header {
+        overflow: hidden;
+        margin: 0;
         height: 100vh;
+        color: aqua;
+        width: 100%;
+        position: relative;
+    }
+
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        object-fit: cover;
+        position: absolute;
+    }
+
+    /* .overlay {
+       width: 100%;
+       height: 100%;
+       background: rgba(66, 119, 139, 0.411); 
+       position: absolute;
+       top: 0;
+       left: 0;
+       margin-top: 147px;
+    } */
+
+    .header-content {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
     }
 </style>

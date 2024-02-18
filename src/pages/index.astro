@@ -2,19 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Info from "../components/inicio/Info.astro";
 import Form from "../components/inicio/form.astro";
+import HomeVideo from "../components/inicio/HomeVideo.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="content-index">
-	  <p class="text-6xl">pagina principal</p>
-    </div>
+	<HomeVideo/>
 	<Info/>
 	<Form/>
 </Layout>
 
 
-<style>
-    .content-index{
-        height: 100vh;
-    }
-</style>
