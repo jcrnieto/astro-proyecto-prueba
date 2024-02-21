@@ -1,4 +1,4 @@
-const dataCard = [
+ const dataCard = [
     {
         id:1,
         icon:"dfbdfb",
@@ -19,4 +19,7 @@ const dataCard = [
     }
 ]
 
-export default dataCard;
+export default dataCard
+   
+    
+
