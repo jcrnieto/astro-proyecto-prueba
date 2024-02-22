@@ -1,17 +1,39 @@
 ---
-//import descriptionService from "../data/descriptionService.js"
----
+import descriptionService from "../data/descriptionService.js";
+import planes from "../data/planes.js";
+import CardPlan from "../components/CardPlan.astro";
 
-<div class="container mx-auto">
-    <h1 class="text-2xl sm:text-2xl md:text-4xl lg:text-4xl text-center">
+//import image from "../image/background-image.png";
+
+const combinedArray = descriptionService.map((obj, index) => [
+    obj,
+    planes[index],
+]);
+---
+<!-- style="background-image: url('../image/background-service.png')" -->
+<div class="container mx-auto  w-full" >
+    <h1 class="text-2xl sm:text-2xl md:text-4xl lg:text-4xl text-center my-14 ">
         ¿Cuál es el mejor sitio para tu negocio?
     </h1>
-    <h3 class="text-center text-xl sm:text-xl md:text-2xl lg:text-2xl">
+    <h3 class="text-center text-xl sm:text-xl md:text-2xl lg:text-2xl mb-16 mx-4 sm:mx-4">
         Te proporcionamos un resumen de las principales funcionalidades e
-        intenciones de cada sitio para que puedas analizar y elegir el más 
+        intenciones de cada sitio para que puedas analizar y elegir el más
         conveniente para tu empresa o negocio
     </h3>
     <div>
-
+        <div class="mt-8 ">
+            {
+                combinedArray.map(([descriptionService, planes]) => (
+                    <div class="flex flex-col md:flex-row mt-5">
+                        <div class="flex items-center w-full md:w-3/4 mb-4 mr-3 md:mb-0 text-center bg-white rounded-lg overflow-hidden">
+                            <p class=" text-2xl mx-4 sm:mx-4 my-4 sm:my-4" >{descriptionService.description}</p>
+                        </div>
+                        <div class="w-full sm:w-auto md:w-1/4">
+                            <CardPlan  title={planes.title}/>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
     </div>
 </div>
