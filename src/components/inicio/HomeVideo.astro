@@ -2,7 +2,7 @@
 import video from "../../videos/video-inicio1.mp4";
 ---
 
-<div class="header content">
+<div class="header">
     <video src={video} autoplay loop></video>
 </div>
 <div class="overlay"></div>
@@ -53,5 +53,13 @@ import video from "../../videos/video-inicio1.mp4";
         transform: translate(-50%, -50%);
         text-align: center;
         margin-top: 40px;
+    }
+
+    @media (max-width: 768px){
+        .header {
+            z-index: -10;
+            position: relative;
+        }
+    
     }
 </style>

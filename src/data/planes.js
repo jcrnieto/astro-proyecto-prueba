@@ -10,7 +10,7 @@ const planes = [
         call:"Generacion de call to action"
     },
     {
-        title:"Plan Basico",
+        title:"Plan intermedio",
         servicios:"servicios de publicacion en redes sociales",
         posteos:"Máximo 12 posteos mensuales",
         historias:"16 historias mensuales",
@@ -22,7 +22,7 @@ const planes = [
         publicidad:"Armado y gestion de publicidad en redes sociales y Google ADS"
     },
     {
-        title:"Plan Basico",
+        title:"Plan premium",
         servicios:"servicios de publicacion en redes sociales",
         posteos:"Máximo 12 posteos mensuales",
         historias:"16 historias mensuales",

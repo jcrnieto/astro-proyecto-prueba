@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import video from "../videos/video-inicio.mp4";
+import InfoNosotros from "../components/InfoNosotros.astro";
 ---
 
 <Layout title="">
@@ -9,14 +10,18 @@ import video from "../videos/video-inicio.mp4";
     </div>
     <div class="overlay"></div>
     <div class="header-content">
-        <h1>titulo</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolor
-            aut labore iure obcaecati illum qui iusto facilis reprehenderit vero.
-            Cumque pariatur fugiat facilis ea molestiae perferendis aliquam iusto
-            accusantium.
-        </p>
+        <h1 class="text-2xl sm:text-2xl md:text-4xl lg:text-4xl text-center my-14 font-extrabold">
+            Sobre Nosotros
+        </h1>
+        <h3 class="text-center text-xl sm:text-xl md:text-2xl lg:text-2xl mb-10 mx-4 sm:mx-4 font-bold">
+            Bienvenidos a nuestra agencia
+        </h3>
+        <h5 class="text-center text-xl sm:text-xl md:text-2xl lg:text-2xl mb-10 mx-4 sm:mx-4 font-semibold">
+            A continuación podrás ver un breve resumen de cuáles son los valores sobre los cuáles trabaja
+            nuestro equipo y cuáles son nuestros objetivos para con nuestros clientes
+        </h5>
     </div>
+    <InfoNosotros/>
 </Layout>
 
 

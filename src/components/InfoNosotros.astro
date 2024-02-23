@@ -1,0 +1,16 @@
+---
+import infoNosotros from "../data/infoNosotros.js";
+import CardNosotros from "../components/cardNosotros.astro";
+
+---
+
+<div class="flex flex-wrap items-center justify-center mt-6 ">
+    {
+        infoNosotros.map(info =>(
+             <CardNosotros 
+                 title={info.title}
+                 description={info.description}
+             />
+        ))
+    }
+</div>
