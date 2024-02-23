@@ -1,5 +1,5 @@
 ---
-const { title, servicios, posteos, historias, copy, estrategia, mercado, call } = Astro.props
+const { title, servicios, posteos, historias, copy, estrategia, mercado, call, contenido, publicidad } = Astro.props
 ---
 
 
@@ -9,6 +9,7 @@ const { title, servicios, posteos, historias, copy, estrategia, mercado, call } 
   <div class="p-1 bg-green-200"></div>
   <div class="p-8">
     <h2 class="text-3xl font-bold text-gray-800 mb-4">{title}</h2>
+    
     <!-- <p class="text-gray-600 mb-6">Perfect for growing businesses</p>
     <p class="text-4xl font-bold text-gray-800 mb-6">$49.99</p> -->
     <ul class="text-sm text-gray-600 mb-6">
@@ -27,7 +28,8 @@ const { title, servicios, posteos, historias, copy, estrategia, mercado, call } 
             stroke-linecap="round"
           ></path>
         </svg>
-        25 Users
+        <p class="">{servicios}</p>
+        
       </li>
       <li class="mb-2 flex items-center">
         <svg
@@ -44,7 +46,7 @@ const { title, servicios, posteos, historias, copy, estrategia, mercado, call } 
             stroke-linecap="round"
           ></path>
         </svg>
-        Advanced Features
+        {posteos}
       </li>
       <li class="flex items-center">
         <svg
@@ -61,7 +63,109 @@ const { title, servicios, posteos, historias, copy, estrategia, mercado, call } 
             stroke-linecap="round"
           ></path>
         </svg>
-        24/7 Support
+        {historias}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {copy}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {estrategia}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {mercado}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {call}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {contenido}
+      </li>
+      <li class="flex items-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          fill="none"
+          class="w-4 h-4 mr-2 text-green-500"
+        >
+          <path
+            d="M5 13l4 4L19 7"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+          ></path>
+        </svg>
+        {publicidad}
       </li>
     </ul>
   </div>
