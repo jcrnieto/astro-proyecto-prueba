@@ -3,7 +3,7 @@ import descriptionService from "../data/descriptionService.js";
 import planes from "../data/planes.js";
 import CardPlan from "../components/CardPlan.astro";
 
-//import image from "../image/background-image.png";
+//import image from "../image/background-service.png";
 
 const combinedArray = descriptionService.map((obj, index) => [
     obj,
@@ -11,6 +11,9 @@ const combinedArray = descriptionService.map((obj, index) => [
 ]);
 ---
 <!-- style="background-image: url('../image/background-service.png')" -->
+<!-- <div class="background">
+    <img src={image.src} alt="">
+</div> -->
 <div class="container mx-auto  w-full" >
     <h1 class="text-2xl sm:text-2xl md:text-4xl lg:text-4xl text-center my-14 ">
         ¿Cuál es el mejor sitio para tu negocio?
@@ -25,6 +28,7 @@ const combinedArray = descriptionService.map((obj, index) => [
             {
                 combinedArray.map(([descriptionService, planes]) => (
                     <div class="flex flex-col md:flex-row mt-5 ">
+                        <div class="p-1 bg-green-200"></div>
                         <div class="flex items-center
                                     w-full
                                     md:w-3/4
@@ -35,7 +39,7 @@ const combinedArray = descriptionService.map((obj, index) => [
                                     rounded-lg
                                     overflow-hidden
                                     ">
-                            <p class=" text-2xl mx-4 sm:mx-4 my-4 sm:my-4 font-serif animate-fade-right animate-once font-pragati-narrow" >
+                            <p class=" text-xl mx-4 sm:mx-4 my-4 sm:my-2 animate-fade-right animate-once font-pragati-narrow " >
                                 {descriptionService.description}
                             </p>
                         </div>
@@ -80,3 +84,14 @@ const combinedArray = descriptionService.map((obj, index) => [
         });
     });
   </script>
+
+  <!-- <style>
+    .background{
+        overflow: hidden;
+        margin: 0;
+        height: 100vh;
+        color: aqua;
+        width: 100%;
+        position: relative;
+    }
+  </style> -->
