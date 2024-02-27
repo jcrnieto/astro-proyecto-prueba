@@ -2,7 +2,7 @@
 import image from "../image/image-elegirnos.jpg";
 ---
 
-<div class="flex items-center justify-center flex-col lg:flex-row">
+<div class="flex items-center justify-center flex-col lg:flex-row mt-5 animate-jump-in animate-once">
     <div class="lg:w-1/2 mb-4 lg:mb-0">
         <img src={image.src} alt="">
     </div>
@@ -13,3 +13,24 @@ import image from "../image/image-elegirnos.jpg";
            optas por la innovación, la excelencia y un compromiso continuo con el éxito de tu proyecto.</p>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const animatedElement = document.querySelector('.animate-jump-in.animate-once');
+        const threshold = 0.5;
+  
+        window.addEventListener('scroll', function () {
+            
+            const elementPosition = animatedElement.getBoundingClientRect();
+  
+            const activationThreshold = animatedElement.clientHeight * threshold;
+  
+            if (elementPosition.top < window.innerHeight - activationThreshold) {
+                 animatedElement.classList.remove('hidden');
+            } else {
+                 animatedElement.classList.add('hidden');
+            }
+        });
+    });
+  </script>

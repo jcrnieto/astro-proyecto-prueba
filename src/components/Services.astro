@@ -24,7 +24,7 @@ const combinedArray = descriptionService.map((obj, index) => [
         <div class="mt-8 ">
             {
                 combinedArray.map(([descriptionService, planes]) => (
-                    <div class="flex flex-col md:flex-row mt-5">
+                    <div class="flex flex-col md:flex-row mt-5 animate-fade-down animate-once">
                         <div class="flex items-center w-full md:w-3/4 mb-4 mr-3 md:mb-0 text-center bg-white rounded-lg overflow-hidden">
                             <p class=" text-2xl mx-4 sm:mx-4 my-4 sm:my-4 font-serif" >{descriptionService.description}</p>
                         </div>
@@ -48,3 +48,24 @@ const combinedArray = descriptionService.map((obj, index) => [
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const animatedElement = document.querySelector('.animate-fade-down.animate-once');
+        const threshold = 0.5;
+  
+        window.addEventListener('scroll', function () {
+            
+            const elementPosition = animatedElement.getBoundingClientRect();
+  
+            const activationThreshold = animatedElement.clientHeight * threshold;
+  
+            if (elementPosition.top < window.innerHeight - activationThreshold) {
+                 animatedElement.classList.remove('hidden');
+            } else {
+                 animatedElement.classList.add('hidden');
+            }
+        });
+    });
+  </script>

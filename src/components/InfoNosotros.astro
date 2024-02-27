@@ -4,7 +4,7 @@ import CardNosotros from "../components/cardNosotros.astro";
 
 ---
 
-<div class="flex flex-wrap items-center justify-center mt-6 ">
+<div class="flex flex-wrap items-center justify-center mt-6 animate-fade-up animate-once">
     {
         infoNosotros.map(info =>(
              <CardNosotros 
@@ -14,3 +14,24 @@ import CardNosotros from "../components/cardNosotros.astro";
         ))
     }
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const animatedElement = document.querySelector('.animate-fade-up.animate-once');
+        const threshold = 0.5;
+  
+        window.addEventListener('scroll', function () {
+            
+            const elementPosition = animatedElement.getBoundingClientRect();
+  
+            const activationThreshold = animatedElement.clientHeight * threshold;
+  
+            if (elementPosition.top < window.innerHeight - activationThreshold) {
+                 animatedElement.classList.remove('hidden');
+            } else {
+                 animatedElement.classList.add('hidden');
+            }
+        });
+    });
+  </script>

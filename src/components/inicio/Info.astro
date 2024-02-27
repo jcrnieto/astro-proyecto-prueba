@@ -11,7 +11,7 @@ import dataCard from "../../data/dataCard";
             la idea de que tu empresa crezca y funcione de manera óptima
         </h4>
     </div>
-    <div class="flex flex-wrap justify-center items-center">
+    <div class="flex flex-wrap justify-center items-center animate-fade-up animate-once">
         {
             dataCard.map(({ title, icon, description }) => (
                 <CardInfo title={title} icon={icon} description={description} />
@@ -25,3 +25,27 @@ import dataCard from "../../data/dataCard";
         height: 100vh;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const animatedElement = document.querySelector('.animate-fade-up.animate-once');
+        const threshold = 0.5;
+  
+        window.addEventListener('scroll', function () {
+            
+            const elementPosition = animatedElement.getBoundingClientRect();
+  
+            const activationThreshold = animatedElement.clientHeight * threshold;
+  
+            if (elementPosition.top < window.innerHeight - activationThreshold) {
+                 animatedElement.classList.remove('hidden');
+            } else {
+                 animatedElement.classList.add('hidden');
+            }
+        });
+    });
+  </script>
+  
+  
+  
