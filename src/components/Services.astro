@@ -24,11 +24,22 @@ const combinedArray = descriptionService.map((obj, index) => [
         <div class="mt-8 ">
             {
                 combinedArray.map(([descriptionService, planes]) => (
-                    <div class="flex flex-col md:flex-row mt-5 animate-fade-down animate-once">
-                        <div class="flex items-center w-full md:w-3/4 mb-4 mr-3 md:mb-0 text-center bg-white rounded-lg overflow-hidden">
-                            <p class=" text-2xl mx-4 sm:mx-4 my-4 sm:my-4 font-serif" >{descriptionService.description}</p>
+                    <div class="flex flex-col md:flex-row mt-5 ">
+                        <div class="flex items-center
+                                    w-full
+                                    md:w-3/4
+                                    mb-4 mr-3
+                                    md:mb-0
+                                    text-center
+                                  bg-white
+                                    rounded-lg
+                                    overflow-hidden
+                                    ">
+                            <p class=" text-2xl mx-4 sm:mx-4 my-4 sm:my-4 font-serif animate-fade-right animate-once" >
+                                {descriptionService.description}
+                            </p>
                         </div>
-                        <div class="w-full sm:w-auto md:w-1/4">
+                        <div class="w-full sm:w-auto md:w-1/4 animate-fade-right animate-once">
                             <CardPlan
                                title={planes.title}
                                servicios={planes.servicios}
@@ -52,7 +63,7 @@ const combinedArray = descriptionService.map((obj, index) => [
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         
-        const animatedElement = document.querySelector('.animate-fade-down.animate-once');
+        const animatedElement = document.querySelector('.animate-fade-right.animate-once');
         const threshold = 0.1;
   
         window.addEventListener('scroll', function () {
