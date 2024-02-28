@@ -1,0 +1,17 @@
+---
+import procesos from "../data/procesos.js";
+---
+
+<div class="bg-red-300">
+    <h1 class="font-extrabold text-4xl pt-8 pl-8">Nuestro Proceso</h1>
+    <div class="flex flex-wrap justify-center items-center">
+    {
+        procesos.map((proceso) => (
+            <div class="flex flex-col w-80 my-7 mx-7">
+                <h4 class="text-2xl">{proceso.title}</h4>
+                <p>{proceso.description}</p>
+            </div>
+        ))
+    }
+    </div>
+</div>
