@@ -1,8 +1,12 @@
 ---
 import image from "../image/image-elegirnos.jpg";
 ---
-
-<div class="flex items-center justify-center flex-col lg:flex-row mt-8 animate-jump-in animate-once">
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+<div class="flex items-center justify-center flex-col lg:flex-row mt-8 hidden animate-fade-right animate-ease-in-out">
     <div class="lg:w-1/2 mb-4 lg:mb-0">
         <img src={image.src} alt="">
     </div>
@@ -14,10 +18,12 @@ import image from "../image/image-elegirnos.jpg";
     </div>
 </div>
 
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         
-        const animatedElement = document.querySelector('.animate-jump-in.animate-once');
+        const animatedElement = document.querySelector('.animate-fade-right.animate-ease-in-out');
         const threshold = 0.1;
   
         window.addEventListener('scroll', function () {
@@ -28,7 +34,8 @@ import image from "../image/image-elegirnos.jpg";
   
             if (elementPosition.top < window.innerHeight - activationThreshold) {
                  animatedElement.classList.remove('hidden');
-            } else {
+            }
+             else {
                  animatedElement.classList.add('hidden');
             }
         });
